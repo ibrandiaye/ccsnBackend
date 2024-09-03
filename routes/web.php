@@ -5,6 +5,8 @@ use App\Http\Controllers\EntreeController;
 use App\Http\Controllers\FournisseurController;
 use App\Http\Controllers\ProduitController;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\CommandeController;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -20,6 +22,7 @@ Route::resource('admin/categorie',CategorieController::class);
 Route::resource('admin/fournisseur',FournisseurController::class);
 Route::resource('admin/entree',EntreeController::class);
 Route::resource('admin/produit',ProduitController::class);
+Route::resource('admin/commandes', CommandeController::class);
 
 Route::get('/', function () {
     return view('welcome');
